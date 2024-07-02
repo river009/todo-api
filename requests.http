@@ -1,0 +1,32 @@
+// 보낼 리퀘스트를 적으면 됨
+
+GET http://localhost:3000/tasks
+
+### //  리퀘스트를 구분하려면 #을 3개 써야함 
+
+GET http://localhost:3000/tasks?sort=oldset&count=3
+
+###
+
+GET http://localhost:3000/tasks/10
+
+###
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+    "title": "산책",
+    "description": "열심히 운동하기"
+}
+
+###
+PATCH http://localhost:3000/tasks/668356388326b5a95f9ee1b8
+Content-Type: application/json
+
+{
+    "title": "1시간 운동",
+    "description": "열심히 운동하기"
+}
+
+###
+DELETE http://localhost:3000/tasks/668356388326b5a95f9ee1b8
